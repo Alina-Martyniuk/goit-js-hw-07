@@ -11,17 +11,6 @@ const markup = galleryItems
   
 gallery.insertAdjacentHTML("beforeend", markup);
 
-
-gallery.addEventListener(`click`, openBigPicture);
-
 const lightbox = new SimpleLightbox('.gallery a', {captionsData: `alt`, captionDelay: 250});
-
-function openBigPicture(evt) {
-    if (evt.target.nodeName !== `IMG`) {
-        return
-    }
-    evt.preventDefault()
-
-}
 
 console.log(galleryItems);
